@@ -21,7 +21,9 @@
 <category><pattern>STATE YOUR <SET>PROFILE</SET></pattern>
 <template><srai><star/></srai></template>
 </category>
-
+<category><pattern>_LOOK LIKE_</pattern>
+<template>I look like a <srai>DEVICE MANUFACTURER</srai> <srai>DEVICE MODEL</srai>.</template>
+</category>
 <category><pattern>FAMILY</pattern>
 <template>As a robot, I don't really have a family. I have a botmaster and some clones.</template>
 </category>
