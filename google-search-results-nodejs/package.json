@@ -1,0 +1,67 @@
+{
+  "_from": "google-search-results-nodejs",
+  "_id": "google-search-results-nodejs@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Aad2DSsBPFRKBxPNjrwU7SVjB1k9PQmSVOcreGZb0EQWdlozKeWucmeGpYpOgFVJgg0wX+fy3grKDYCRDgw1lA==",
+  "_location": "/google-search-results-nodejs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "google-search-results-nodejs",
+    "name": "google-search-results-nodejs",
+    "escapedName": "google-search-results-nodejs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/google-search-results-nodejs/-/google-search-results-nodejs-0.1.0.tgz",
+  "_shasum": "606d2441559037ccd6b498e6d6293a1c794db412",
+  "_spec": "google-search-results-nodejs",
+  "_where": "C:\\Users\\Prakash Desai\\Desktop\\SDP Project\\Google",
+  "author": {
+    "name": "Victor Benarbia victor@serpapi.com"
+  },
+  "bugs": {
+    "url": "https://github.com/serpapi/google-search-results-nodejs/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "npm": "^5.8.0"
+  },
+  "deprecated": false,
+  "description": "Google Search Results Node JS API via SerpApi.com",
+  "devDependencies": {
+    "expect": "^22.4.3",
+    "mocha": "^5.1.1"
+  },
+  "homepage": "https://github.com/serpapi/google-search-results-nodejs#readme",
+  "keywords": [
+    "google",
+    "search",
+    "scrape",
+    "api",
+    "query",
+    "json",
+    "html",
+    "image",
+    "automated",
+    "localization"
+  ],
+  "license": "ISC",
+  "main": "lib/GoogleSearchResults.js",
+  "name": "google-search-results-nodejs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serpapi/google-search-results-nodejs.git"
+  },
+  "scripts": {
+    "coverage": "mocha -R test && npm run coverage",
+    "test": "mocha"
+  },
+  "version": "0.1.0"
+}
