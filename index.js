@@ -27,7 +27,8 @@ app.post('/webhook',(req,res) =>{
     req.body.result.parameters &&
     req.body.result.parameters.geoCity
       ? req.body.result.parameters.geoCity
-      : "Delhi";
+      : loc();
+	 
 	var w=getWeatherCity(city);
 	
 	return res.json({
@@ -38,9 +39,25 @@ app.post('/webhook',(req,res) =>{
   
 	
 	
-});
+})
 //console.log(w);
+var rlt;
+function loc()
+{
+	rlt=undefined;
+	var req=request("http://ipinfo.io", function(err,response,body) {
+	var loc=JSON.parse(body);
+	console.log(loc);
+	console.log(loc.city);
+    rlt=loc.city;
+});
+while(rlt == undefined){
+		require('deasync').runLoopOnce();
+	}
+		
+	return rlt;
 
+}
 var result;
 function getWeatherCity(city)
 {
