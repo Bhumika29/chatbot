@@ -17,11 +17,25 @@ const path=require("path");
 //const server=require("http").createServer(app);
 //const io=require("socket.io")(server);
 app.post('/webhook',(req,res) =>{
-	//var city="delhi";
+
+if(req.body.result && req.body.result.parameters && req.body.result.parameters.any)
+{
 	
-//	var city=req.body.result.parameters.geoCity;
-//	if(city == null)
-//		city="Delhi";
+  var speech =
+    req.body.result &&
+    req.body.result.parameters &&
+    req.body.result.parameters.any
+      ? req.body.result.parameters.any
+      : "Seems like some problem. Speak again.";
+  return res.json({
+    speech: speech,
+    displayText: speech,
+    source: "webhook-echo-sample"
+  });
+}
+
+else if(req.body.result && req.body.result.parameters && req.body.result.parameters.weather)
+{
 	var city =
     req.body.result &&
     req.body.result.parameters &&
@@ -37,9 +51,11 @@ app.post('/webhook',(req,res) =>{
     source: "webhook-echo-sample"
   });
   
-	
-	
-})
+}
+
+
+
+});
 //console.log(w);
 var rlt;
 function loc()
