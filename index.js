@@ -52,9 +52,9 @@ else if(req.body.result && req.body.result.parameters && req.body.result.paramet
   });
   
 }
-else if(req.body.result && req.body.result.parameters && req.body.result.parameters.die)
+else if(req.body.result && req.body.result.parameters && req.body.result.parameters.coin)
 {
-	      var w=die();
+	      var w=coin();
         return res.json({
           speech: w,
           displayText: w,
@@ -63,7 +63,7 @@ else if(req.body.result && req.body.result.parameters && req.body.result.paramet
   
 
 var result;
-function die()
+function coin()
 {
   var resu;
 	var coin=Math.floor(Math.random() * 2);
@@ -83,7 +83,58 @@ function die()
 	return result;
 }
 	
+
 }
+else if(req.body.result && req.body.result.parameters && req.body.result.parameters.die)
+{
+	      var w=die();
+        return res.json({
+          speech: w,
+          displayText: w,
+          source: "Places"
+        }); 
+
+var result;
+function die()
+{
+  var resu;
+	var coin=Math.floor(Math.random() * 6);
+  if(coin==0)
+  {
+    resu='one';
+  }
+	if(coin==1)
+  {
+    resu='two';
+  }
+	if(coin==2)
+  {
+    resu='three';
+  }
+	if(coin==3)
+  {
+    resu='four';
+  }
+	if(coin==4)
+  {
+    resu='five';
+  }
+	if(coin==5)
+  {
+    resu='six';
+  }
+  result=resu;
+	while(result == undefined){
+		require('deasync').runLoopOnce();
+	}
+
+	return result;
+}
+
+}
+
+
+
 else if(req.body.result && req.body.result.parameters && req.body.result.parameters.joke)
 {
 
